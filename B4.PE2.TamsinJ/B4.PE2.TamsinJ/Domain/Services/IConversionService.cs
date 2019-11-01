@@ -6,11 +6,11 @@ namespace B4.PE2.TamsinJ.Domain.Services
 {
     interface IConversionService
     {
-        int HoursToDays(int hours);
+        double HoursToDays(int hours);
         int DaysToHours(int days);
-        int MinutesToHours(int minutes);
+        double MinutesToHours(int minutes);
         int HoursToMinutes(int hours);
-        int SecondsToMinutes(int seconds);
+        double SecondsToMinutes(int seconds);
         int MinutesToSeconds(int minutes);
     }
 }
