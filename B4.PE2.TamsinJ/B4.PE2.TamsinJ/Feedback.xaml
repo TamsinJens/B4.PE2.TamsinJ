@@ -7,9 +7,27 @@
              x:Class="B4.PE2.TamsinJ.Feedback">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Feedback" FontSize="Title"/>
+            <Label Text="Naam:"/>
+            <Entry Placeholder="Vul hier je naam in." x:Name="inputNaam" />
+            <Label Text="Voornaam:"/>
+            <Entry Placeholder="Vul hier je voornaam in." x:Name="inputVoornaam"/>
+            <Label Text="E-mailadres:"/>
+            <Entry Placeholder="Vul hier je e-mailadres in." x:Name="inputemail" Keyboard="Email"/>
+            <Label Text="Telefoonnummer:"/>
+            <Entry Placeholder="Vul hier je telefoonnummer in." x:Name="inputtel" Keyboard="Telephone"/>
+            <Picker x:Name="picker"
+        Title="Kies uw onderwerp:">
+            <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Bug report</x:String>
+                <x:String>Question</x:String>
+                <x:String>Other</x:String>
+                </x:Array>
+                </Picker.ItemsSource>
+                </Picker>
+            <Label Text="Bericht:" />
+            <Entry Placeholder="Vul hier je bericht in." x:Name="inputbericht" Keyboard="Text"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
