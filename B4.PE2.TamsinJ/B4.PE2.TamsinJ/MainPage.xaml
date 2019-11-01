@@ -8,9 +8,15 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="Welcome to my PE2!" TextColor="Red" FontSize="Large" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Button BackgroundColor="Blue" TextColor="White" x:Name="btnGoToLapTimer" Text="Go to lap timer" Clicked="btnGoToLapTimer_Clicked">
+        </Button>
+        <Button BackgroundColor="Blue" TextColor="White" x:Name="btnGoToTimeConversions" Text="Go to time conversions" Clicked="btnGoToTimeConversions_Clicked">
+        </Button>
+        <Button BackgroundColor="Blue" TextColor="White" x:Name="btnGiveFeedback" Text="Give feedback" Clicked="btnGiveFeedback_Clicked">
+        </Button>
     </StackLayout>
 
 </ContentPage>

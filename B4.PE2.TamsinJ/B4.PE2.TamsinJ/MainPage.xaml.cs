@@ -17,5 +17,17 @@ namespace B4.PE2.TamsinJ
         {
             InitializeComponent();
         }
+        private async void btnGoToLapTimer_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new NavigationPage(new MainPage()));
+        }
+        public async void btnGoToTimeConversions_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new NavigationPage(new MainPage()));
+        }
+        public async void btnGiveFeedback_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new NavigationPage(new MainPage()));
+        }
     }
 }
