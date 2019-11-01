@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,24 +13,35 @@ namespace B4.PE2.TamsinJ
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LapTimer : ContentPage
     {
+        Stopwatch stopWatch = new Stopwatch();
         public LapTimer()
         {
             InitializeComponent();
         }
 
-        public async void btnStart_Clicked(object sender, System.EventArgs e)
+        public void BtnStart_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Feedback());
+            btnLap.IsEnabled = true;
+            btnStop.IsEnabled = true;
+            btnStart.IsEnabled = false;
+
+            stopWatch.Start();
+            
+
         }
 
-        public async void btnLap_Clicked(object sender, System.EventArgs e)
+        public void BtnLap_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Feedback());
+            Navigation.PushAsync(new Feedback());
         }
 
-        public async void btnStop_Clicked(object sender, System.EventArgs e)
+        public void BtnStop_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Feedback());
+            TimeSpan ts = stopWatch.Elapsed;
+            stopWatch.Stop();
+            string elapsedTime = ts.ToString();
+
+            lblTime.Text = elapsedTime;
         }
     }
 }
