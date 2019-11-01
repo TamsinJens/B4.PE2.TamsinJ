@@ -11,32 +11,32 @@
                 <Label Text="Time convertor" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
             <Label Text="Convert hours to days" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="HoursToDays" HorizontalOptions="Center"/>
+                <Entry Text="0" x:Name="HoursToDays" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnHoursToDays_Clicked" x:Name="btnHoursToDays"/>
 
             <Label Text="Convert days to hours" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="DaysToHours" HorizontalOptions="Center"/>
+                <Entry Text="0" x:Name="DaysToHours" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnDaysToHours_Clicked" x:Name="btnDaysToHours"/>
             
             <Label Text="Convert minutes to hours" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="MinutesToHours" HorizontalOptions="Center"/>
+            <Entry Text="0" x:Name="MinutesToHours" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnMinutesToHours_Clicked" x:Name="btnMinutesToHours"/>
             
             <Label Text="Convert hours to minutes" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="HoursToMinutes" HorizontalOptions="Center"/>
+                <Entry Text="0" x:Name="HoursToMinutes" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnHoursToMinutes_Clicked" x:Name="btnHoursToMinutes"/>
             
             <Label Text="Convert seconds to minutes" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="SecondsToMinutes" HorizontalOptions="Center"/>
+                <Entry Text="0" x:Name="SecondsToMinutes" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnSecondsToMinutes_Clicked" x:Name="btnSecondsToMinutes"/>
             
             <Label Text="Convert minutes to seconds" HorizontalOptions="Center" FontSize="Large"/>
             <Label Text="Hours:" HorizontalOptions="Center"/>
-            <Entry Text="0" x:Name="MinutesToSeconds" HorizontalOptions="Center"/>
+                <Entry Text="0" x:Name="MinutesToSeconds" HorizontalOptions="Center" Keyboard="Numeric"/>
             <Button Text="Convert" Clicked="btnMinutesToSeconds_Clicked" x:Name="btnMinutesToSeconds"/>
         </StackLayout>
         </ScrollView>
