@@ -17,7 +17,7 @@ namespace B4.PE2.TamsinJ
             InitializeComponent();
         }
 
-        public async void btnSubmit_ClickedAsync(object sender, EventArgs e)
+        public async void btnSubmit_Clicked(object sender, EventArgs e)
         {
             if (SubmitControl())
             {
