@@ -16,6 +16,7 @@
             <Entry Placeholder="Vul hier je e-mailadres in." x:Name="inputemail" Keyboard="Email"/>
             <Label Text="Telefoonnummer:"/>
             <Entry Placeholder="Vul hier je telefoonnummer in." x:Name="inputtel" Keyboard="Telephone"/>
+            <DatePicker x:Name="inputdate"/>
             <Picker x:Name="picker"
         Title="Kies uw onderwerp:">
             <Picker.ItemsSource>
@@ -28,6 +29,7 @@
                 </Picker>
             <Label Text="Bericht:" />
             <Entry Placeholder="Vul hier je bericht in." x:Name="inputbericht" Keyboard="Text"/>
+            <Button Text="Doorsturen" Clicked="btnSubmit_Clicked" x:Name="btnSubmit"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
