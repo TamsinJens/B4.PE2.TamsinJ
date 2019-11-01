@@ -32,19 +32,19 @@ namespace B4.PE2.TamsinJ
 
         public bool SubmitControl()
         {
-            if(inputNaam.Text.Length > 0)
+            if(inputNaam.Text != null)
             {
-                if(inputVoornaam.Text.Length > 0)
+                if(inputVoornaam.Text != null)
                 {
-                    if(inputemail.Text.Length > 0) //betere controle nodig
+                    if(inputemail.Text != null) //betere controle nodig
                     {
-                        if(inputtel.Text.Length == 10)
+                        if(inputtel.Text != null && inputtel.Text.Length == 10)
                         {
                             if(inputdate != null)
                             {
                                 if(picker != null)
                                 {
-                                    if(inputbericht.Text.Length > 0)
+                                    if(inputbericht != null)
                                     {
                                         return true;
                                     }
