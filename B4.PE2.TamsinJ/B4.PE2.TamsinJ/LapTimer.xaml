@@ -12,7 +12,7 @@
                    TextColor="Black"
                    x:Name="lblTime"
                    Text="00:00:00"
-                   FontSize="Header"/>
+                   FontSize="Title"/>
             <Button BackgroundColor="Blue" TextColor="White" x:Name="btnStart" Text="Start" Clicked="BtnStart_Clicked" IsEnabled="True">
             </Button>
             <Button BackgroundColor="Blue" TextColor="White" x:Name="btnLap" Text="Lap" Clicked="BtnLap_Clicked" IsEnabled="False">

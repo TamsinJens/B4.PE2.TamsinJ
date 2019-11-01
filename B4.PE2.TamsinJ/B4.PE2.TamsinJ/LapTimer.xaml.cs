@@ -14,19 +14,25 @@ namespace B4.PE2.TamsinJ
     public partial class LapTimer : ContentPage
     {
         Stopwatch stopWatch = new Stopwatch();
+        int amountOfLaps = 0;
         public LapTimer()
         {
             InitializeComponent();
         }
 
-        public void BtnStart_Clicked(object sender, EventArgs e)
+        public async void BtnStart_Clicked(object sender, EventArgs e)
         {
             btnLap.IsEnabled = true;
             btnStop.IsEnabled = true;
             btnStart.IsEnabled = false;
+            amountOfLaps++;
 
-            stopWatch.Start();
-            
+            stopWatch.Restart();
+            while (stopWatch.IsRunning)
+            {
+                lblTime.Text = stopWatch.Elapsed.ToString();
+                await Task.Delay(1);
+            }
 
         }
 
@@ -35,13 +41,22 @@ namespace B4.PE2.TamsinJ
             Navigation.PushAsync(new Feedback());
         }
 
-        public void BtnStop_Clicked(object sender, EventArgs e)
+        public async void BtnStop_Clicked(object sender, EventArgs e)
         {
             TimeSpan ts = stopWatch.Elapsed;
+            lblTime.Text = ts.ToString();
             stopWatch.Stop();
-            string elapsedTime = ts.ToString();
+            btnStart.IsEnabled = true;
+            btnLap.IsEnabled = false;
+            btnStop.IsEnabled = false;
+            int elapsedTime = Int32.Parse((ts.Hours * 3600 + ts.Minutes * 60 + ts.Seconds).ToString());
 
-            lblTime.Text = elapsedTime;
+            int averageTime = elapsedTime / amountOfLaps;
+            int averageHours = averageTime / 3600;
+            int averageMinutes = (averageTime - averageHours * 3600) / 60;
+            int averageSeconds = (averageTime - averageHours * 3600) - averageMinutes * 60;
+            string averageTimeString = $"{averageHours.ToString()}:{averageMinutes.ToString()}:{averageSeconds.ToString()}";
+            await DisplayAlert("Results", $"Amount of laps: {amountOfLaps} \nTotal time: {ts.ToString()} \nAverage time: {averageTimeString}", "Ok");
         }
     }
 }
