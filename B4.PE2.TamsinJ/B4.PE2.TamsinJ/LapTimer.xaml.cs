@@ -25,9 +25,10 @@ namespace B4.PE2.TamsinJ
             btnLap.IsEnabled = true;
             btnStop.IsEnabled = true;
             btnStart.IsEnabled = false;
-            amountOfLaps++;
+            amountOfLaps = 1;
 
             stopWatch.Restart();
+            lblLap.Text = amountOfLaps.ToString();
             while (stopWatch.IsRunning)
             {
                 lblTime.Text = stopWatch.Elapsed.ToString();
@@ -38,7 +39,8 @@ namespace B4.PE2.TamsinJ
 
         public void BtnLap_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Feedback());
+            amountOfLaps++;
+            lblLap.Text = amountOfLaps.ToString();
         }
 
         public async void BtnStop_Clicked(object sender, EventArgs e)
