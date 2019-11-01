@@ -7,9 +7,25 @@
              x:Class="B4.PE2.TamsinJ.LapTimer">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="00" x:Name="Hour" FontSize="Title"/>
+                        <Span Text=":"/>
+                        <Span Text="00" x:Name="Minute" FontSize="Title"/>
+                        <Span Text=":"/>
+                        <Span Text="00" x:Name="second" FontSize="Title"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button BackgroundColor="Blue" TextColor="White" x:Name="btnStart" Text="Start" Clicked="btnStart_Clicked" IsEnabled="True">
+            </Button>
+            <Button BackgroundColor="Blue" TextColor="White" x:Name="btnLap" Text="Lap" Clicked="btnLap_Clicked" IsEnabled="False">
+            </Button>
+            <Button BackgroundColor="Blue" TextColor="White" x:Name="btnStop" Text="Stop" Clicked="btnStop_Clicked" IsEnabled="False">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

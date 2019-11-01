@@ -16,5 +16,20 @@ namespace B4.PE2.TamsinJ
         {
             InitializeComponent();
         }
+
+        public async void btnStart_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Feedback());
+        }
+
+        public async void btnLap_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Feedback());
+        }
+
+        public async void btnStop_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Feedback());
+        }
     }
 }
