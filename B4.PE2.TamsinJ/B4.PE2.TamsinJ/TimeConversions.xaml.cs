@@ -16,5 +16,34 @@ namespace B4.PE2.TamsinJ
         {
             InitializeComponent();
         }
+        private async void btnHoursToDays_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
+
+        private async void btnDaysToHours_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
+
+        private async void btnMinutesToHours_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
+
+        private async void btnHoursToMinutes_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
+
+        private async void btnSecondsToMinutes_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
+
+        private async void btnMinutesToSeconds_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LapTimer());
+        }
     }
 }

@@ -7,7 +7,7 @@
              x:Class="B4.PE2.TamsinJ.LapTimer">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Lap timer" FontSize="Header" HorizontalOptions="Center" VerticalOptions="StartAndExpand"/>
+            <Label Text="Lap timer" FontSize="Title" HorizontalOptions="Center" VerticalOptions="StartAndExpand" FontAttributes="Bold"/>
             <Label Text="Your Time:" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center"/>
             <Label HorizontalOptions="Center" 
                    VerticalOptions="Center"
